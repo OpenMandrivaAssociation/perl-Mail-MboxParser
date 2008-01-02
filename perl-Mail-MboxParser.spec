@@ -19,6 +19,7 @@ Buildrequires:	perl-devel
 %endif
 BuildRequires:	perl-MIME-tools
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 
 %description
