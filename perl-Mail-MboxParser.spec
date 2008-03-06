@@ -1,7 +1,7 @@
 %define	module	Mail-MboxParser
 %define	name	perl-%{module}
 %define	version	0.55
-%define	release	%mkrel 2
+%define	release	%mkrel 3
 
 %define _requires_exceptions perl(Mail::MboxParser::Mail)
 %define _provides_exceptions perl(Mail::MboxParser::Mail)\\|perl(Mail::MboxParser::Base)\\|perl(Mail::MboxParser::Mail::Body)\\|perl(Mail::MboxParser::Mail::Convertable)
