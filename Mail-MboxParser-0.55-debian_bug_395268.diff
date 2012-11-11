@@ -1,0 +1,28 @@
+--- MboxParser.pm	2005-12-08 11:15:39.000000000 +0100
++++ MboxParser.pm.oden	2011-05-21 09:10:35.514210399 +0200
+@@ -519,7 +519,6 @@ sub next_message_new() {
+ 
+     return undef if ref(\$p) eq 'SCALAR' or $p->end_of_file;
+ 
+-    seek $self->{READER}, $self->{CURR_POS}, SEEK_SET;
+     my $nl = $self->{NL};
+     my $mailref = $p->read_next_email;
+     my ($header, $body) = split /$nl$nl/, $$mailref, 2;
+@@ -793,7 +792,8 @@ sub _detect_nl {
+     my $self = shift;
+     my $h = $self->{READER};
+     my $newline;
+-    
++
++    my $old_position = tell $h;
+     seek $h, 0, SEEK_SET;
+     while (sysread $h, (my $c), 1) {
+         if (ord($c) == 13) {
+@@ -807,6 +807,7 @@ sub _detect_nl {
+             last;
+         }
+     }
++    seek($h, $old_position, 0);
+     return $newline;
+ }
+ 
