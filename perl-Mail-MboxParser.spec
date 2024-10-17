@@ -16,7 +16,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	19
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Mail/%{upstream_name}-%{upstream_version}.tar.bz2
 Patch0:	Mail-MboxParser-0.55-debian_bug_395268.diff
 BuildArch:	noarch
