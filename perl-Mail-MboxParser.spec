@@ -20,6 +20,7 @@ Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Mail/%{upstream_name}-%{upstream_version}.tar.bz2
 Patch0:	Mail-MboxParser-0.55-debian_bug_395268.diff
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl-MIME-tools
 Requires:	perl-Mail-Mbox-MessageParser
